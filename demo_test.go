@@ -1,10 +1,7 @@
 package demo_cbor
 
 import (
-	//"bytes"
-	//"encoding/json"
 	"fmt"
-	//"log"
 	"math"
 	"testing"
 	"time"
@@ -27,14 +24,11 @@ func TestEncode(t *testing.T) {
 	// of the timestamps is lost. That would be a non-starter.
 	enc, err := cbor.EncOptions{
 		Time: cbor.TimeRFC3339Nano,
-		//		ByteSliceLaterFormat: cbor.ByteSliceLaterFormatBase64,
-		//		String:               cbor.StringToByteString,
-		//		ByteArray:            cbor.ByteArrayToArray,
 	}.EncMode()
 	panicOn(err)
 
 	dec, err := cbor.DecOptions{
-		//Time: cbor.TimeRFC3339Nano,
+		//Time: cbor.TimeRFC3339Nano, // does not seem to be needed, nor even available.
 		//		ByteSliceLaterFormat: cbor.ByteSliceLaterFormatBase64,
 		//		String:               cbor.StringToByteString,
 		//		ByteArray:            cbor.ByteArrayToArray,
@@ -85,9 +79,6 @@ func Benchmark_CBOR_UnmarshalMyStruct(b *testing.B) {
 	// of the timestamps is lost. That would be a non-starter.
 	enc, err := cbor.EncOptions{
 		Time: cbor.TimeRFC3339Nano,
-		//		ByteSliceLaterFormat: cbor.ByteSliceLaterFormatBase64,
-		//		String:               cbor.StringToByteString,
-		//		ByteArray:            cbor.ByteArrayToArray,
 	}.EncMode()
 	panicOn(err)
 

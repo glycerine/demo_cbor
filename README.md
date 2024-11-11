@@ -12,8 +12,8 @@ Greenpack is 4x or 400% faster on Unmarshalling, and 3x faster on Marshal.
 Code generation for the win. Reflection is slow.
 
 Importantly, for diagnostics, CBOR cannot be converted to JSON without
-knowing the expected structure (what is encoded in the 
-potential arbitrary data) in advance. That's a huge downside.
+knowing the expected structure (what is encoded in the data, which
+can be arbitrary) in advance. That's a huge downside.
 
 ~~~
 goos: darwin

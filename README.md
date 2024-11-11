@@ -16,6 +16,14 @@ Importantly, for diagnostics, CBOR cannot be converted to JSON without
 knowing the expected structure (what is encoded in the data, which
 can be arbitrary) in advance. That's a huge downside.
 
+It seems like there are many different flavors of CBOR. I had
+to set some options to get the necessary (for my work) 
+sub-second precision on timestamps. 
+
+I'm still not sure how timezones are decoded, because
+I see "time.Local" coming back rather than time.UTC consistently,
+which is worrying.
+
 ~~~
 goos: darwin
 goarch: amd64

@@ -5,7 +5,7 @@ I took a quick look at a new kid on the block, CBOR ( https://github.com/fxamack
 
 It was not around when I created greenpack ( https://github.com/glycerine/greenpack ). 
 
-TL;DR: It still has a ways to go to be interesing/offer competitive performance. 
+TL;DR: It still has a ways to go to be interesting/offer competitive performance. 
 
 Greenpack is 4x or 400% faster on Unmarshalling, and 3x faster on Marshal.
 Greenpack does much less memory allocation.

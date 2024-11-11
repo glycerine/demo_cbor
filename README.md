@@ -8,6 +8,7 @@ It was not around when I created greenpack ( https://github.com/glycerine/greenp
 TL;DR: It still has a ways to go to be interesing/offer competitive performance. 
 
 Greenpack is 4x or 400% faster on Unmarshalling, and 3x faster on Marshal.
+Greenpack does much less memory allocation.
 
 Code generation for the win. Reflection is slow.
 

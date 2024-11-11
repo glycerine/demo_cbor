@@ -12,10 +12,6 @@ Greenpack does much less memory allocation.
 
 Code generation for the win. Reflection is slow.
 
-Importantly, for diagnostics, CBOR cannot be converted to JSON without
-knowing the expected structure (what is encoded in the data, which
-can be arbitrary) in advance. That's a huge downside.
-
 It seems like there are many different flavors of CBOR. I had
 to set some options to get the necessary (for my work) 
 sub-second precision on timestamps. 
@@ -23,6 +19,12 @@ sub-second precision on timestamps.
 I'm still not sure how timezones are decoded, because
 I see "time.Local" coming back rather than time.UTC consistently,
 which is worrying.
+
+Update: I learned how to decode CBOR into JSON without
+knowing the schema of the CBOR stream. It is do-able,
+but of course be aware that if you have NaN floating 
+point numbers, the Go std lib encoding/json will barf on them.
+CBOR transports NaN, no problem.
 
 ~~~
 goos: darwin
